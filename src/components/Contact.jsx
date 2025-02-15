@@ -36,7 +36,7 @@ function Contact()
                 <>
                 <div style={{display:"flex",justifySelf:"center",marginTop:"10px",alignItems:"center",gap:"10px"}}>
               <img src={items.img} alt='' style={{width:"30px",marginTop:"1%"}}/>
-              <h4>{items.social} : <a href={items.url} target='_blank' rel="noreferrer" style={{color:"white"}}>
+              <h4>{items.social} : <a href={items.url} target='_blank' rel="noreferrer" style={{color:"orange"}}>
               {items.name} </a></h4></div>
                 </>
             )
