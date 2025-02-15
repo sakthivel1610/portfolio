@@ -1,0 +1,257 @@
+*{
+  margin:0;
+  padding:0;
+}
+.container
+{
+  background-color:  #0d254b;
+  color:white;
+  width: 100vw;
+position: relative;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #061a38;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar__head {
+  font-weight: 900;
+  font-size: 24px;
+  color: white;
+}
+
+.navbar__items {
+  display: flex;
+  gap: 20%;
+  margin-right: 20%;
+}
+
+.navbar__items button {
+  font-size: 16px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.side__navbar {
+  position: fixed;
+  top: 13%;
+  left: -100%; 
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  background-color: #061a38;
+  transition: left 1s ease-in-out;
+}
+.side__navbar__items button {
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: white;
+  padding:5%;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menubar {
+  width: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+/* home Page */
+.home__name
+{
+  font-size:4vw;
+}
+.img__container img
+{
+  width:300px;
+  border-radius: 100%;
+  position: relative;
+  animation: bounce 1s infinite;
+
+}
+
+.home__container
+{
+  justify-content: space-around;
+  width:80%;
+  margin-top: 3%;
+  padding-left: 10%;
+  padding-top: 8%;
+  display: flex;
+  align-items: center;
+}
+
+/* About css */
+.about__container
+{
+  display: flex;
+  margin-top:2%;
+ 
+}
+.about__roles
+{
+  margin-left:5%;
+  text-align: justify;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap:4%;
+}
+.about__developer {
+  padding: 10px;
+  background: linear-gradient(to right, #475d6b, transparent);
+background-size: 0% 100%;
+background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: background-size 0.5s ease-in-out; 
+}
+.about__developer:hover {
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+
+/* Skills.jsx
+ */
+ .skill
+ {
+ 
+  border: solid #475d6b 3px;
+  background-color: #061a38;
+  padding:3%;
+  margin-left:10%;
+  margin-right:8%;
+  border-radius: 10px;
+ }
+.skill__container{
+  display: flex;
+  width:50%;
+  gap:3%;
+ margin:2% 5%;
+flex-wrap:wrap;
+}
+.skill__developer
+{
+  display: flex;
+  justify-content: space-around;
+}
+.skill__img__container
+{
+  flex-basis: 10%;
+  flex-grow: 1;
+  text-align: center;
+  margin:2%;
+  font-weight: 700;
+  border-radius: 100%;
+cursor: pointer;
+}
+ .skills__img{
+  width:70px;
+  padding:10px;
+ }
+ .skill__img__back
+ {
+  background-color:#18356c;
+  transition: background-color 0.5s ease-in-out;
+ }
+ .skill__img__back:hover
+ {
+  background-color:#ced8de;
+ }
+
+
+ /* project container */
+
+ .project__container
+  {
+  margin:5% 10%;
+  background-color: #061a38;
+  border-radius: 10px;
+  padding: 3%;
+ }
+ .project__details
+ {
+  display: flex;
+  width: 80%;
+  gap:3%;
+  padding:2%;
+  align-items: center;
+  margin:2%;
+  border:solid #475d6b 2px;
+ }
+ .project__button
+ {
+  padding:5px 12px;
+  margin:10px 10px;
+  border-radius:5px;
+  border:none;
+  background-color:#4c5ea3;
+  color:white;
+  cursor: pointer;
+  font-size: 15px;
+ }
+
+ /* contact.jsz */
+ .contact__container
+{
+  margin:5% 10%;
+  background-color: #061a38;
+  border-radius: 10px;
+  padding: 3%;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom:0%;
+}
+@media screen and (max-width: 700px) {
+  .home__container,.about__container,.project__details,.skill__developer
+  {
+    flex-direction: column;
+  }
+  .skill__img__container
+  {
+    flex-basis: 10%;
+
+  }
+  .skill__container{
+    width: 80%;
+  }
+  .skills__img{
+    width: 70px;
+  }
+  .navbar__items {
+    display: none; /* Hide navbar items on small screens */
+  }
+
+  .menubar {
+    display: block; 
+  }
+
+
+  .side__navbar.open {
+    left: 0; 
+  }
+
+  .side__navbar__items {
+    display: flex;
+    flex-direction: column;
+   margin-left: 10%;
+    padding: 20px;
+  }
+
+  
+
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
